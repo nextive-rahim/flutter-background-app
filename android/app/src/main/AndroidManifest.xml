@@ -10,7 +10,7 @@
         android:allowBackup="false"
         android:exported="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Flutter Background"
+        android:label="Background"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
