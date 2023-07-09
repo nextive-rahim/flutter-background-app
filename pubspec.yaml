@@ -37,7 +37,7 @@ flutter_launcher_icons:
   ios: false
   image_path: "assets/background.png"
 flutter_app_name:
-  name: "Background"
+  name: "Background App"
   
 
 

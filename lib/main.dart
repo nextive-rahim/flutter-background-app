@@ -55,7 +55,7 @@ class _MyWidgetState extends State<MyWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Background'),
+        title: Text('Background Processing'),
         centerTitle: true,
       ),
       body: Center(

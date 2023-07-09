@@ -10,7 +10,7 @@
         android:allowBackup="false"
         android:exported="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Background"
+        android:label="Background App"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
