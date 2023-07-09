@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -22,11 +23,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Background Demo',
       home: AppRetainWidget(
-        child: MyHomePage(),
+        child: MyWidget(),
       ),
     );
   }
 }
+
 class MyWidget extends StatefulWidget {
   const MyWidget({super.key});
 
@@ -35,13 +37,36 @@ class MyWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyWidget> {
+  int _counter = 0;
+  @override
+  void initState() {
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        _counter++;
+      });
+      print('Counter incrementeds: $_counter');
+    });
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Background'),
+      ),
+      body: Center(
+        child: Text(
+          _counter.toString(),
+        ),
+      ),
+    );
   }
 }
+
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key ?key}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
